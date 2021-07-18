@@ -1,5 +1,5 @@
 import { createSlice, createAsyncThunk} from '@reduxjs/toolkit'
-import { getRegisters, postRegister } from '../../../service/service';
+import { getRegisters, postRegister } from '../../service/service';
 
 export const fetchRegisters = createAsyncThunk(
   'users/fetchRegisters',
