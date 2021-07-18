@@ -1,15 +1,8 @@
 import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux'
-import Form from './components/forms';
 import Card from './Cards'
-import DetailsCard from './components/detailsCard';
 import styled from 'styled-components'
-import {
-  decrement,
-  increment,
-  incrementByAmount,
-  fetchProducts,
-} from './redux/features/counter/counterSlice';
+import { fetchRegisters } from '../redux/features/cadastreSlice';
 
 const Button = styled.button`
   background-color: blue;
@@ -21,46 +14,25 @@ const Button = styled.button`
 `
 
 function ListRegisters() {
-  const count = useSelector((state) => state.counterStorage.value)
-  const products = useSelector((state) => state.counterStorage);
-  const { renderDetail } = useSelector((state) => state.counterStorage);
+  const {
+    renderDetail,
+    registersList,
+    loading,
+    created
+  } = useSelector((state) => state.registersStorage);
+
   const dispatch = useDispatch()
   console.log(renderDetail);
 
   useEffect(() => {
-    dispatch(fetchProducts());
-  }, [dispatch, products.created]);
-
+    dispatch(fetchRegisters());
+  }, [dispatch, created]);
 
   return(
     <div>
-    <Form/>
-    <div>
-      <Button
-      aria-label="Decrement value"
-      onClick={() => dispatch(decrement())}
-      >
-      Decrementd
-    </Button>
-      <span>{count}</span>
-      <Button
-        aria-label="Increment value"
-        onClick={() => dispatch(increment())}
-      >
-        Increment
-      </Button>
-      <Button
-        aria-label="Decrement value"
-        onClick={() => dispatch(incrementByAmount(30))}
-      >
-        incrementByAmount
-      </Button>
-    </div>
-    {(products.loading)
+    {(loading)
     ?<h1>Loading...</h1>
-    :products.productsList.map((transation, index) => <Card key={transation.id}  props={transation}/>) }
-
-    {(renderDetail)?<DetailsCard/>: ""}
+    :registersList.map((transation, index) => <Card key={transation.id}  props={transation}/>) }
   </div>
 
   );

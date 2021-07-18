@@ -7,7 +7,7 @@ const instance = axios.create({
 });
 
 const instanceTransations = axios.create({
-  baseURL: "http://localhost:5000",
+  baseURL: "https://api-rest-ahlero.herokuapp.com/",
 });
 
 export const getProducts = async () => {

@@ -8,18 +8,18 @@ import styled from 'styled-components'
 import { createRegister } from '../redux/features/cadastreSlice';
 
 const Container = styled.div`
-  background-color: antiquewhite;
+  /* background-color: antiquewhite;
   width: 18em;
   margin: 5em;
   padding: 2em;
   height: 100%;
   display: flex;
   justify-content: center;
-  margin: auto;
+  margin: auto; */
 `
 
 const Form = styled.form`
-  /* background-color: antiquewhite; */
+  background-color: antiquewhite;
   /* width: 80%;
   height: 100%; */
   display: flex;

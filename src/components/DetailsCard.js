@@ -9,15 +9,18 @@ const Span = styled.span`
 `
 
 function DetailsCard() {
-  const products = useSelector((state) => state.counterStorage);
-  const { idToDetailRender } = useSelector((state) => state.counterStorage);
+  const {
+    registersList,
+    idToDetailRender
+  } = useSelector((state) => state.registersStorage);
 
-  const productDetail = products.productsList.filter((product) => product.id === idToDetailRender );
+  const registerDetail = registersList.filter((product) => product.id === idToDetailRender );
 
-  const { estabelecimento, cliente, valor, descricao  } =  productDetail[0];
+  const { id, estabelecimento, cliente, valor, descricao  } =  registerDetail[0];
 
   return(
     <div>
+      <Span>{id}</Span>
       <Span>{estabelecimento}</Span>
       <Span>{cliente}</Span>
       <Span>{valor}</Span>
