@@ -5,6 +5,7 @@ export const fetchRegisters = createAsyncThunk(
   'users/fetchRegisters',
   async (_userId, thunkAPI) => {
     const response = await getRegisters();
+    console.log(response);
     return response
   }
 )

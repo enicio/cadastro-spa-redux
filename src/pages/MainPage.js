@@ -1,9 +1,13 @@
 import React from 'react';
-import Formulary from '../components/forms';
+import Formulary from '../components/Formulary';
+import ListRegisters from '../components/ListRegisters';
 
 function MainPage(params) {
   return(
-    <Formulary/>
+    <div>
+      <Formulary/>
+      <ListRegisters/>
+    </div>
   );
 }
 
