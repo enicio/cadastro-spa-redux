@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux'
 import Form from './components/forms';
-import Card from './components/cards'
+import Card from './Cards'
 import DetailsCard from './components/detailsCard';
 import styled from 'styled-components'
 import {
