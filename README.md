@@ -23,7 +23,7 @@ Styled Components e o controle de estados fo feito com Redux
 ## Tecnologias utilizadas
 
 - [React](https://reactjs.org/)
-- [SASS](https://sass-lang.com/)
+- [Styled Components](https://styled-components.com/)
 - [Redux ToolKit](https://redux-toolkit.js.org/)
 #
 ## Como executar
@@ -67,7 +67,7 @@ Api com os dados para renderização dos cards.
 ```http
   POST https://api-rest-ahlero.herokuapp.com/api/v1/transacao
 ```
-
+##### Formato do json para cadastro
 ```http
   {
    "estabelecimento": "45.283.163/0001-67",
@@ -76,3 +76,9 @@ Api com os dados para renderização dos cards.
    "descricao": "Pagamento a fornecedor auditado via Gedanken!"
 }
 ```
+
+##### Resposta apos cadastro
+
+{
+   "aceito": true
+}
