@@ -1,70 +1,78 @@
-# Getting Started with Create React App
+<h1 align="center" >Cadastro de Clientes</h1>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+### Protótipo da página para cadastro de clientes.
+#
+A página foi desenvolvida em React utilizando o conceito de SPA (single page aplication), a estilização foi feita com 
+Styled Components e o controle de estados fo feito com Redux
 
-In the project directory, you can run:
+#
+## Funcionalidades
 
-### `yarn start`
+<ul>
+<li>Cadastro de clientes</li>
+<li>Visualização de todos os cadastros adquiridos via consulta em API </li>
+<li>Vizualização dos detalhes de cada cadastro</li>
+</ul>
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+#
+## Demonstração
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+[Clique aqui para acessar a demonstração](https://cadastro-spa-redux.vercel.app/)
+#
+## Tecnologias utilizadas
 
-### `yarn test`
+- [React](https://reactjs.org/)
+- [SASS](https://sass-lang.com/)
+- [Redux ToolKit](https://redux-toolkit.js.org/)
+#
+## Como executar
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Clone o projeto
 
-### `yarn build`
+```bash
+  git clone git@github.com:enicio/cadastro-spa-redux.git
+```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Mude para as pasta raiz
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+```bash
+  cd cadastro-spa-redux
+```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Instale as dependencias
 
-### `yarn eject`
+```bash
+  npm install
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+Inicie o servidor
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+```bash
+  npm start
+```
+#
+## API
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+Api com os dados para renderização dos cards.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+#### Listar todos os cadastros
 
-## Learn More
+```http
+  GET https://api-rest-ahlero.herokuapp.com/
+```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+#### Criar novo cadastro
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+```http
+  POST https://api-rest-ahlero.herokuapp.com/api/v1/transacao
+```
 
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+```http
+  {
+   "estabelecimento": "45.283.163/0001-67",
+   "cliente": "094.214.930-01",
+   "valor": 590.01,
+   "descricao": "Pagamento a fornecedor auditado via Gedanken!"
+}
+```
