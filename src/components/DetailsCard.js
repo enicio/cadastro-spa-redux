@@ -2,10 +2,17 @@ import React from 'react';
 import { useSelector } from 'react-redux'
 import styled from 'styled-components'
 
+const ConstainerDetails = styled.div`
+  min-width: 40vw;
+  background-color: #d9d9d9;
+  margin: 1em;
+  border-radius: 1em;
+`
 
 const Span = styled.span`
   font-size: 1em;
   padding: 0.5em;
+  display: flex;
 `
 
 function DetailsCard() {
@@ -19,13 +26,13 @@ function DetailsCard() {
   const { id, estabelecimento, cliente, valor, descricao  } =  registerDetail[0];
 
   return(
-    <div>
-      <Span>{id}</Span>
-      <Span>{estabelecimento}</Span>
-      <Span>{cliente}</Span>
-      <Span>{valor}</Span>
-      <Span>{descricao}</Span>
-    </div>
+    <ConstainerDetails>
+      <Span>id: {id}</Span>
+      <Span>Estabelecimento: {estabelecimento}</Span>
+      <Span>Cliente: {cliente}</Span>
+      <Span>Valor: {valor}</Span>
+      <Span>Descrição: {descricao}</Span>
+    </ConstainerDetails>
   );
 }
 

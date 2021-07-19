@@ -31,7 +31,8 @@ const initialState = {
   created: false,
   refresh: false,
   renderDetail: false,
-  idToDetailRender: ''
+  idToDetailRender: '',
+  showForm: false
 }
 
 export const registerSlice = createSlice({
@@ -54,6 +55,9 @@ export const registerSlice = createSlice({
     renderDetails: (state, action) => {
       state.renderDetail = !state.renderDetail
       state.idToDetailRender = action.payload
+    },
+    showForm: (state) => {
+      state.showForm = !state.showForm
     }
   },
   extraReducers: {
@@ -86,6 +90,6 @@ export const registerSlice = createSlice({
 })
 
 // Action creators are generated for each case reducer function
-export const { increment, decrement, incrementByAmount, renderDetails } = registerSlice.actions
+export const { increment, decrement, incrementByAmount, renderDetails, showForm } = registerSlice.actions
 
 export default registerSlice.reducer

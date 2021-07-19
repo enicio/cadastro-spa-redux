@@ -7,30 +7,27 @@ import styled from 'styled-components'
 
 import { createRegister } from '../redux/features/cadastreSlice';
 
-const Container = styled.div`
-  /* background-color: antiquewhite;
-  width: 18em;
+const ContainerForm = styled.div`
+  position: absolute;
+  /* top: 8em; */
+  /* left: 9em; */
+  background-color: #16376c;
+  width: 28em;
   margin: 5em;
   padding: 2em;
-  height: 100%;
+  height: 36em;
   display: flex;
   justify-content: center;
-  margin: auto; */
+  margin: auto;
 `
 
 const Form = styled.form`
-  background-color: antiquewhite;
-  /* width: 80%;
-  height: 100%; */
   display: flex;
   flex-direction: column;
   font-size: 0.8rem;
 `
 
 const Label = styled.label`
-  /* background-color: antiquewhite; */
-  /* width: 80%;
-  height: 100%; */
   display: flex;
   flex-direction: column;
   font-size: 0.8rem;
@@ -78,7 +75,7 @@ function Formulary() {
 
   return(
     <div>
-      <Container>
+      <ContainerForm>
       <Form onSubmit={handleSubmit} >
         <Label htmlFor="cpf">
           CPF
@@ -108,7 +105,7 @@ function Formulary() {
         </Label>
         <button  >Cadastrar</button>
       </Form>
-      </Container>
+      </ContainerForm>
     </div>
   )
 }
