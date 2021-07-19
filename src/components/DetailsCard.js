@@ -4,12 +4,13 @@ import styled from 'styled-components'
 
 const ConstainerDetails = styled.div`
   min-width: 40vw;
-  background-color: #d9d9d9;
+  background-color: whitesmoke;
   margin: 1em;
   border-radius: 1em;
 `
 
 const Span = styled.span`
+  color: #a0a0a0;
   font-size: 1em;
   padding: 0.5em;
   display: flex;

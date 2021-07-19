@@ -19,7 +19,7 @@ const MainContainer = styled.div`
 const InformationContainer = styled.div`
   min-width: 80vw;
   max-width: 80vw;
-  min-height: 70vh;
+  height: 60%;
   background-color: #f8f8f8;
   display: flex;
 `

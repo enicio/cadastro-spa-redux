@@ -32,6 +32,19 @@ const Label = styled.label`
   flex-direction: column;
   font-size: 0.8rem;
   padding: 0.3em;
+  font-weight: 700;
+  color: whitesmoke;
+`
+
+const Button = styled.button`
+  background-color: #09a150;
+  border-radius: 1em;
+  border: none;
+  height: 2.5em;
+  font-weight: 700;
+  font-size: 1.5em;
+  color: whitesmoke;
+  margin-top: 2em;
 `
 
 function Formulary() {
@@ -79,31 +92,31 @@ function Formulary() {
       <Form onSubmit={handleSubmit} >
         <Label htmlFor="cpf">
           CPF
+          </Label>
           <MaskedInput
             name="cpf"
             mask="999.999.999-99"
             value={inputField.cpf}
             onChange={handleChange}
           />
-        </Label>
         <Label htmlFor="cpf">
             CNPJ
+        </Label>
             <MaskedInput
               name="cnpj"
               mask="99.999.999/9999-99"
               value={inputField.cnpj}
               onChange={handleChange}
             />
-        </Label>
         <Label htmlFor="valor">
           Valor
-          <input name="valor" id="valor" type="text" required onChange={handleChange} />
         </Label>
+          <input name="valor" id="valor" type="text" required onChange={handleChange} />
         <Label htmlFor="description">
           Descrição
-          <input id="description" name="description" type="text" required onChange={handleChange} />
         </Label>
-        <button  >Cadastrar</button>
+          <input id="description" name="description" type="text" required onChange={handleChange} />
+        <Button  >Cadastrar</Button>
       </Form>
       </ContainerForm>
     </div>

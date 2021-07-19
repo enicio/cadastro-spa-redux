@@ -16,16 +16,22 @@ const Button = styled.button`
 const ListUserContainner = styled.div`
   min-width: 32em;
   max-height: 40em;
+  min-height: 40em;
   background-color: #f8f8f8;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   overflow: scroll;
 `
 
-const Loading = styled.span`
-
+const Loading = styled.div`
+  min-width: 32em;
+  min-height: 40em;
+  max-height: 40em;
+  /* overflow: initial; */
+  font-size: 5em;
+  color: red;
 `
 
 function ListRegisters() {
@@ -46,7 +52,7 @@ function ListRegisters() {
   return(
     <ListUserContainner>
     {(loading)
-    ?<h1>Loading...</h1>
+    ?<Loading>Loading...</Loading>
     :registersList.map((transation, index) => <Card key={transation.id}  props={transation}/>) }
   </ListUserContainner>
 
